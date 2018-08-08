@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		9B6665D7211B682A0038873C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6665D6211B682A0038873C /* AppDelegate.swift */; };
-		9B6665D9211B682A0038873C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6665D8211B682A0038873C /* ViewController.swift */; };
+		9B6665D9211B682A0038873C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6665D8211B682A0038873C /* SplashViewController.swift */; };
 		9B6665DC211B682A0038873C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6665DA211B682A0038873C /* Main.storyboard */; };
 		9B6665DE211B682E0038873C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6665DD211B682E0038873C /* Assets.xcassets */; };
 		9B6665E1211B682E0038873C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6665DF211B682E0038873C /* LaunchScreen.storyboard */; };
+		9B6665EB211B6F110038873C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6665EA211B6F110038873C /* LoginViewController.swift */; };
+		9B6665ED211B75950038873C /* ElectricityBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6665EC211B75950038873C /* ElectricityBillViewController.swift */; };
+		9B6665F0211B75BB0038873C /* BillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6665EE211B75BB0038873C /* BillDetailViewController.swift */; };
+		9B6665F1211B75BB0038873C /* BillDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6665EF211B75BB0038873C /* BillDetailViewController.xib */; };
+		9B6665F4211B82E30038873C /* ElectricityBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6665F3211B82E30038873C /* ElectricityBill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B6665D3211B682A0038873C /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6665D6211B682A0038873C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B6665D8211B682A0038873C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9B6665D8211B682A0038873C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		9B6665DB211B682A0038873C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B6665DD211B682E0038873C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B6665E0211B682E0038873C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B6665E2211B682E0038873C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B6665EA211B6F110038873C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9B6665EC211B75950038873C /* ElectricityBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityBillViewController.swift; sourceTree = "<group>"; };
+		9B6665EE211B75BB0038873C /* BillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetailViewController.swift; sourceTree = "<group>"; };
+		9B6665EF211B75BB0038873C /* BillDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillDetailViewController.xib; sourceTree = "<group>"; };
+		9B6665F3211B82E30038873C /* ElectricityBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityBill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +48,7 @@
 		9B6665CA211B682A0038873C = {
 			isa = PBXGroup;
 			children = (
+				9B6665F2211B82AD0038873C /* Models */,
 				9B6665D5211B682A0038873C /* Assignment */,
 				9B6665D4211B682A0038873C /* Products */,
 			);
@@ -55,13 +66,25 @@
 			isa = PBXGroup;
 			children = (
 				9B6665D6211B682A0038873C /* AppDelegate.swift */,
-				9B6665D8211B682A0038873C /* ViewController.swift */,
+				9B6665D8211B682A0038873C /* SplashViewController.swift */,
 				9B6665DA211B682A0038873C /* Main.storyboard */,
 				9B6665DD211B682E0038873C /* Assets.xcassets */,
 				9B6665DF211B682E0038873C /* LaunchScreen.storyboard */,
 				9B6665E2211B682E0038873C /* Info.plist */,
+				9B6665EA211B6F110038873C /* LoginViewController.swift */,
+				9B6665EC211B75950038873C /* ElectricityBillViewController.swift */,
+				9B6665EE211B75BB0038873C /* BillDetailViewController.swift */,
+				9B6665EF211B75BB0038873C /* BillDetailViewController.xib */,
 			);
 			path = Assignment;
+			sourceTree = "<group>";
+		};
+		9B6665F2211B82AD0038873C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B6665F3211B82E30038873C /* ElectricityBill.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +147,7 @@
 			files = (
 				9B6665E1211B682E0038873C /* LaunchScreen.storyboard in Resources */,
 				9B6665DE211B682E0038873C /* Assets.xcassets in Resources */,
+				9B6665F1211B75BB0038873C /* BillDetailViewController.xib in Resources */,
 				9B6665DC211B682A0038873C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B6665D9211B682A0038873C /* ViewController.swift in Sources */,
+				9B6665F4211B82E30038873C /* ElectricityBill.swift in Sources */,
+				9B6665EB211B6F110038873C /* LoginViewController.swift in Sources */,
+				9B6665F0211B75BB0038873C /* BillDetailViewController.swift in Sources */,
+				9B6665ED211B75950038873C /* ElectricityBillViewController.swift in Sources */,
+				9B6665D9211B682A0038873C /* SplashViewController.swift in Sources */,
 				9B6665D7211B682A0038873C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
