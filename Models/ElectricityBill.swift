@@ -21,6 +21,20 @@ class ElectricityBill
             return (Double(totalUnit) * 0.75)
         
         }
-        else if totalUnit > 100 && totalUnit <
+        else if totalUnit > 100 && totalUnit < 250
+        {
+            return (Double(totalUnit) * 1.25)
+        }
+        else if totalUnit > 250 && totalUnit < 450
+        {
+            return (Double(totalUnit) * 1.75)
+        }
+        else
+        {
+            return (Double(totalUnit) * 2.75)
+        }
+        
+        
     }
+    
 }
