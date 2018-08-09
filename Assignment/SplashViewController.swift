@@ -14,7 +14,13 @@ class SplashViewController: UIViewController {
     {
         
         super.viewDidLoad()
+        perform(#selector(self.goToLoginScreen), with: nil, afterDelay: 3)
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @objc func goToLoginScreen()
+    {
+        performSegue(withIdentifier: "lvc", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
