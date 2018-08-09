@@ -8,8 +8,16 @@
 
 import UIKit
 
-class BillDetailViewController: UIViewController {
+class BillDetailViewController: UIViewController
+{
 
+    @IBOutlet weak var lblName: UILabel!
+    
+    @IBOutlet weak var lblGender: UILabel!
+    
+    
+    @IBOutlet weak var lblTotal: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -8,8 +8,15 @@
 
 import UIKit
 
-class ElectricityBillViewController: UIViewController {
-
+class ElectricityBillViewController: UIViewController
+{
+    var electricityBill = ElectricityBill()
+    @IBOutlet weak var txtCustomerName: UITextField!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var lblBillDate: UILabel!
+    @IBOutlet weak var lblGender: UILabel!
+    @IBOutlet weak var segmentGender: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +28,33 @@ class ElectricityBillViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    @IBAction func btnCalculate(_ sender: UIButton)
+    {
+        electricityBill.customerName = txtCustomerName.text
+        
+        if segmentGender.selectedSegmentIndex == 0
+        {
+            electricityBill.gender = .MALE
+        }
+        else if segmentGender.selectedSegmentIndex == 1
+        {
+            electricityBill.gender = .FEMALE
+        }
+        else
+        {
+            electricityBill.gender = .OTHER
+        }
+        
+        electricityBill.billDate = datePicker.date
+        
+        
+        performSegue(withIdentifier: "bdvc", sender: self)
+        
+    
+        
+    }
+    
     /*
     // MARK: - Navigation
 

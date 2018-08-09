@@ -11,7 +11,8 @@ class ElectricityBill
 {
     var customerID: Int!
     var customerName: String!
-    var Gender: String!
+    var gender: Gender!
+    
     var totalUnit: Int = 0
     var billDate: Date!
     var totalPayment: Double!
@@ -35,6 +36,13 @@ class ElectricityBill
         }
         
         return total
+    }
+    
+    enum Gender: String
+    {
+        case MALE = "Male"
+        case FEMALE = "Female"
+        case OTHER = "Other"
     }
     
     
