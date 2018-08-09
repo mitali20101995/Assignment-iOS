@@ -16,25 +16,26 @@ class ElectricityBill
     var billDate: Date!
     var totalPayment: Double!
     {
+        var total: Double
         if totalUnit <= 100
         {
-            return (Double(totalUnit) * 0.75)
-        
+            total = (Double(totalUnit) * 0.75)
         }
-        else if totalUnit > 100 && totalUnit < 250
+        else if totalUnit < 150
         {
-            return (Double(totalUnit) * 1.25)
+            total = Double(75) + (Double(totalUnit - 100) * 1.25)
         }
-        else if totalUnit > 250 && totalUnit < 450
+        else if totalUnit < 200
         {
-            return (Double(totalUnit) * 1.75)
+            total = 137.50 + (Double(totalUnit - 150) * 1.75)
         }
         else
         {
-            return (Double(totalUnit) * 2.75)
+            total = 225.00 + (Double(totalUnit - 200) * 2.25)
         }
         
-        
+        return total
     }
+    
     
 }
