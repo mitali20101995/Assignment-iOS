@@ -14,6 +14,7 @@ class SplashViewController: UIViewController {
     {
         
         super.viewDidLoad()
+        
         perform(#selector(self.goToLoginScreen), with: nil, afterDelay: 3)
         // Do any additional setup after loading the view, typically from a nib.
     }

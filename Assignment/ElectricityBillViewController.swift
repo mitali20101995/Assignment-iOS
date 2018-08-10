@@ -8,17 +8,22 @@
 
 import UIKit
 
-class ElectricityBillViewController: UIViewController
+class ElectricityBillViewController: UIViewController, UITextFieldDelegate
 {
     var electricityBill = ElectricityBill()
     @IBOutlet weak var txtCustomerName: UITextField!
     
-    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var lblBillDate: UILabel!
     @IBOutlet weak var lblGender: UILabel!
     @IBOutlet weak var segmentGender: UISegmentedControl!
+    
+    @IBOutlet weak var txtBillDate: UITextField!
+    
+    var datePicker: UIDatePicker!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtBillDate.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -28,6 +33,49 @@ class ElectricityBillViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.pickUpDate(self.txtBillDate)
+    }
+    
+    //Function of datePicker
+    
+    //MARK:- Function of datePicker
+    func pickUpDate(_ textField : UITextField){
+        
+        // DatePicker
+        self.datePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        self.datePicker.backgroundColor = UIColor.white
+        self.datePicker.datePickerMode = UIDatePickerMode.date
+        textField.inputView = self.datePicker
+        
+        // ToolBar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 92/255, green: 216/255, blue: 255/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
+        
+    }
+    // MARK:- Button Done and Cancel
+    @objc func doneClick() {
+        let dateFormatter1 = DateFormatter()
+        dateFormatter1.dateStyle = .medium
+        dateFormatter1.timeStyle = .none
+        txtBillDate.text = dateFormatter1.string(from: datePicker.date)
+        txtBillDate.resignFirstResponder()
+    }
+    
+    @objc func cancelClick() {
+        txtBillDate.resignFirstResponder()
+    }
     
     @IBAction func btnCalculate(_ sender: UIButton)
     {
@@ -47,13 +95,17 @@ class ElectricityBillViewController: UIViewController
         }
         
         electricityBill.billDate = datePicker.date
-        
+    
         
         performSegue(withIdentifier: "bdvc", sender: self)
         
     
         
     }
+    
+    
+    
+
     
     /*
     // MARK: - Navigation

@@ -14,10 +14,18 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var txtPassword: UITextField!
     
+    @IBOutlet weak var switchRememberMe: UISwitch!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet var lblRememberMe: UIView!
+    
+    var userDefault: UserDefaults?
+    
+    
 
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -28,6 +36,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnLogin(_ sender: UIButton)
     {
+        userDefault = UserDefaults.standard
+        
+        //if let userEmail = txtUserName.text
+    
+        
+        
+        
         performSegue(withIdentifier: "ebvc", sender: self)
     }
     
