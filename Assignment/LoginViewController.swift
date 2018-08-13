@@ -38,12 +38,21 @@ class LoginViewController: UIViewController {
     {
         userDefault = UserDefaults.standard
         
-        //if let userEmail = txtUserName.text
+        if txtUserName.text == "admin" && txtPassword.text == "admin@123"
+        {
+            performSegue(withIdentifier: "ebvc", sender: self)
+        }
     
+        else
+        {
+            let alert  =
+                UIAlertController(title: "Message", message: "Incorrect Username or Password", preferredStyle: UIAlertControllerStyle.actionSheet)
+            self.present(alert, animated: true, completion: nil)
+            
+        }
         
         
         
-        performSegue(withIdentifier: "ebvc", sender: self)
     }
     
 

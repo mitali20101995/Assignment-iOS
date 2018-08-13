@@ -10,14 +10,18 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
+    @IBOutlet weak var lblName: UILabel!
+    
+    @IBOutlet weak var imageLion: UIImageView!
     override func viewDidLoad()
     {
         
         super.viewDidLoad()
         
-        perform(#selector(self.goToLoginScreen), with: nil, afterDelay: 3)
+        perform(#selector(self.goToLoginScreen), with: nil, afterDelay: 5)
         // Do any additional setup after loading the view, typically from a nib.
     }
+    @IBOutlet weak var lblStudentID: UILabel!
     
     @objc func goToLoginScreen()
     {

@@ -9,7 +9,7 @@
 import Foundation
 class ElectricityBill
 {
-    var customerID: Int!
+    var customerID: String!
     var customerName: String!
     var gender: Gender!
     

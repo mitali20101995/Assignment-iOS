@@ -11,6 +11,8 @@ import UIKit
 class ElectricityBillViewController: UIViewController, UITextFieldDelegate
 {
     var electricityBill = ElectricityBill()
+    
+    @IBOutlet weak var txtCustomerID: UITextField!
     @IBOutlet weak var txtCustomerName: UITextField!
     
     @IBOutlet weak var lblBillDate: UILabel!
@@ -79,6 +81,7 @@ class ElectricityBillViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func btnCalculate(_ sender: UIButton)
     {
+        electricityBill.customerID = txtCustomerID.text
         electricityBill.customerName = txtCustomerName.text
         
         if segmentGender.selectedSegmentIndex == 0
@@ -99,22 +102,24 @@ class ElectricityBillViewController: UIViewController, UITextFieldDelegate
         
         performSegue(withIdentifier: "bdvc", sender: self)
         
+        
+        
     
         
     }
-    
-    
-    
 
-    
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let dest = segue.destination as? BillDetailViewController
+        dest?.lblCustomerID.text = String(electricityBill.customerID)
+        dest?.lblName.text = String(electricityBill.customerName)
+        dest?.lblGender.text = electricityBill.gender.rawValue
+        dest?.lblTotal.text = String(electricityBill.totalPayment)
+        dest?.lblBillDate.text = electricityBill.billDate.description
     }
-    */
+ 
 
 }

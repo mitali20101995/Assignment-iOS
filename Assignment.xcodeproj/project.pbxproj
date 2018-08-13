@@ -17,6 +17,7 @@
 		9B6665F0211B75BB0038873C /* BillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6665EE211B75BB0038873C /* BillDetailViewController.swift */; };
 		9B6665F1211B75BB0038873C /* BillDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6665EF211B75BB0038873C /* BillDetailViewController.xib */; };
 		9B6665F4211B82E30038873C /* ElectricityBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6665F3211B82E30038873C /* ElectricityBill.swift */; };
+		9BA29E6A21220EB200B82BF6 /* Lion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BA29E6921220EB200B82BF6 /* Lion.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9B6665EE211B75BB0038873C /* BillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetailViewController.swift; sourceTree = "<group>"; };
 		9B6665EF211B75BB0038873C /* BillDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillDetailViewController.xib; sourceTree = "<group>"; };
 		9B6665F3211B82E30038873C /* ElectricityBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityBill.swift; sourceTree = "<group>"; };
+		9BA29E6921220EB200B82BF6 /* Lion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lion.jpg; path = ../../Lion.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		9B6665F2211B82AD0038873C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9BA29E6921220EB200B82BF6 /* Lion.jpg */,
 				9B6665F3211B82E30038873C /* ElectricityBill.swift */,
 			);
 			path = Models;
@@ -147,6 +150,7 @@
 			files = (
 				9B6665E1211B682E0038873C /* LaunchScreen.storyboard in Resources */,
 				9B6665DE211B682E0038873C /* Assets.xcassets in Resources */,
+				9BA29E6A21220EB200B82BF6 /* Lion.jpg in Resources */,
 				9B6665F1211B75BB0038873C /* BillDetailViewController.xib in Resources */,
 				9B6665DC211B682A0038873C /* Main.storyboard in Resources */,
 			);

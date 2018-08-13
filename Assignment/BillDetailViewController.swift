@@ -11,6 +11,7 @@ import UIKit
 class BillDetailViewController: UIViewController
 {
 
+    @IBOutlet weak var lblCustomerID: UILabel!
     @IBOutlet weak var lblName: UILabel!
     
     @IBOutlet weak var lblGender: UILabel!
@@ -18,6 +19,8 @@ class BillDetailViewController: UIViewController
     
     @IBOutlet weak var lblTotal: UILabel!
     
+    
+    @IBOutlet weak var lblBillDate: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
