@@ -14,7 +14,16 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var txtPassword: UITextField!
     
-    @IBOutlet weak var switchRememberMe: UISwitch!
+    
+    @IBAction func switchRememberMe(_ sender: UISwitch)
+    {
+        if sender.isOn
+        {
+            print("ON")
+        }else{
+            print("OFF")
+        }
+    }
     
     @IBOutlet var lblRememberMe: UIView!
     
