@@ -51,7 +51,7 @@
                                 <rect key="frame" x="164" y="291" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="switchRememberMe:" destination="BYZ-38-t0r" eventType="valueChanged" id="2nV-aQ-QKg"/>
+                                    <action selector="switchRememberMe:" destination="BYZ-38-t0r" eventType="valueChanged" id="CW6-AD-vny"/>
                                 </connections>
                             </switch>
                         </subviews>
@@ -60,7 +60,6 @@
                     </view>
                     <connections>
                         <outlet property="lblRememberMe" destination="8bC-Xf-vdC" id="Ler-tq-aWx"/>
-                        <outlet property="switchRememberMe" destination="xPG-yX-vcR" id="PvD-8v-KB9"/>
                         <outlet property="txtPassword" destination="rvm-ns-7Cd" id="EEA-PS-Tl9"/>
                         <outlet property="txtUserName" destination="UVO-lW-MFL" id="u16-XI-iu1"/>
                         <segue destination="WSI-AH-VCo" kind="show" identifier="ebvc" id="aR2-8J-AGH"/>
@@ -144,6 +143,7 @@
                                 <rect key="frame" x="16" y="75" width="326" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
